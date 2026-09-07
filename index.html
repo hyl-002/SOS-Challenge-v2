@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#082e50">
+  <meta name="description" content="ICC 開季實戰：運用產品知識及服務技巧，挑戰令顧客滿意度升至 100%。">
+  <title>ICC 開季實戰</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Shared interface icons. The original character and racecourse images stay in images/. -->
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="icon-headset" viewBox="0 0 24 24"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 12H2v7h4v-7H3Zm18 0h1v7h-4v-7h3ZM21 19c0 2-2 3-5 3h-2"/></symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-3 3V11.5A8.5 8.5 0 0 1 9.5 3h3A8.5 8.5 0 0 1 21 11.5Z"/><path d="M7 10h8M7 14h5"/></symbol>
+      <symbol id="icon-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-12h-8l1-8Z"/></symbol>
+      <symbol id="icon-trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 3h10v7a5 5 0 0 1-10 0V3ZM7 5H3v3a4 4 0 0 0 4 4M17 5h4v3a4 4 0 0 1-4 4"/></symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="icon-back" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 5v16M12 5C9 3 5 3 2 4v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-3-1-7-1-10 1Z"/></symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+    </defs>
+  </svg>
+
+  <main class="game-shell" id="gameShell">
+    <section id="screenLanding" class="screen active" aria-labelledby="landingTitle">
+      <div class="landing-game">
+        <header class="landing-topbar">
+          <h1 id="landingTitle" tabindex="-1"><span class="brand-mark">ICC</span> 開季實戰</h1>
+          <span class="header-icon" aria-hidden="true"><svg class="icon"><use href="#icon-headset"/></svg></span>
+        </header>
+
+        <div class="landing-layout">
+          <div class="landing-stage">
+            <img class="landing-bg" src="images/racecourse-bg.png" alt="" fetchpriority="high">
+            <div class="landing-art">
+              <img class="landing-customer" src="images/customer-neutral.png" alt="準備接受接待的顧客" fetchpriority="high">
+              <div class="landing-mood-card mood-gauge" role="meter" aria-label="起始顧客心情" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+                <div class="mood-inner"><small>起始心情</small><strong>40<span>%</span></strong><span class="gauge-caption">目標 100%</span></div>
+              </div>
+            </div>
+            <div class="bubble landing-speech">
+              <strong>今日由你接待我！</strong>
+              <p>運用產品知識及服務技巧，<br>挑戰令顧客滿意度升至 <b>100%</b>！</p>
+            </div>
+          </div>
+
+          <div class="landing-panel">
+            <div class="landing-mission-title">
+              <h2>準備好接受挑戰？</h2>
+              <p>準確回答 · 貼心服務 · 快速完成</p>
+            </div>
+            <div class="landing-quick-info" aria-label="挑戰概覽">
+              <div class="quick-info-item"><svg class="icon" aria-hidden="true"><use href="#icon-chat"/></svg><strong>10<span> 題</span></strong><small>顧客情境</small></div>
+              <div class="quick-info-item"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg><strong>2:30</strong><small>內完成獲獎分</small></div>
+              <div class="quick-info-item"><svg class="icon" aria-hidden="true"><use href="#icon-trophy"/></svg><strong>100<span>%</span></strong><small>獎賞目標</small></div>
+            </div>
+
+            <form id="staffForm" novalidate>
+              <div class="staff-entry">
+                <label for="staffId">Staff ID</label>
+                <div class="staff-input-wrap">
+                  <svg class="icon staff-icon" aria-hidden="true"><use href="#icon-user"/></svg>
+                  <input id="staffId" name="staffId" type="text" inputmode="numeric" enterkeyhint="go" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="輸入你的 Staff ID" aria-describedby="landingMessage" required>
+                </div>
+              </div>
+              <button id="goRulesBtn" class="yellow-btn landing-start-btn" type="submit"><span class="button-label">開始挑戰</span><svg class="icon button-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+              <p id="landingMessage" class="status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenRules" class="screen" aria-labelledby="rulesTitle" hidden>
+      <header class="navy-header">
+        <button id="backBtn" class="back-btn" type="button" aria-label="返回主頁"><svg class="icon" aria-hidden="true"><use href="#icon-back"/></svg></button>
+        <h2 id="rulesTitle" tabindex="-1">挑戰規則</h2>
+        <span class="header-mark" aria-hidden="true">ICC</span>
+      </header>
+      <div class="rules-page">
+        <div class="rules-intro">
+          <div class="rules-person"><img src="images/customer-neutral.png" alt="" class="rules-person-image"></div>
+          <div class="bubble rules-bubble"><strong>你嘅任務</strong><p>揀出最合適嘅回應，<br>令顧客心情愈嚟愈好！</p></div>
+        </div>
+        <div class="rules-content">
+          <div class="rules-board">
+            <div class="rule"><span class="rule-icon"><svg class="icon" aria-hidden="true"><use href="#icon-chat"/></svg></span><div><b>10 個顧客情境</b><small>選擇最合適的回應</small></div></div>
+            <div class="rule"><span class="rule-icon"><svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg></span><div><b>提升顧客滿意度</b><small>每個選擇都會影響顧客心情</small></div></div>
+            <div class="rule"><span class="rule-icon"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg></span><div><b>2 分 30 秒內完成</b><small>可獲額外 10 分速度獎分</small></div></div>
+            <div class="rule"><span class="rule-icon"><svg class="icon" aria-hidden="true"><use href="#icon-trophy"/></svg></span><div><b>100% Happy Customer</b><small>達標即可符合獎賞資格</small></div></div>
+          </div>
+          <button id="startBtn" class="yellow-btn" type="button"><span class="button-label">開始接待顧客</span><svg class="icon button-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+          <p class="tip"><svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg><span>撳開始、題目載入後先正式計時</span></p>
+          <p id="rulesMessage" class="status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenLoading" class="screen" aria-labelledby="loadingTitle" aria-busy="true" hidden>
+      <div class="loading-page" role="status">
+        <div class="loading-symbol"><div class="spinner"></div><svg class="icon" aria-hidden="true"><use href="#icon-headset"/></svg></div>
+        <h2 id="loadingTitle" tabindex="-1">顧客打緊電話入嚟喇…</h2>
+        <p>正在載入顧客情境，請稍候</p>
+      </div>
+    </section>
+
+    <section id="screenGame" class="screen game-screen" aria-labelledby="gameTitle" hidden>
+      <header class="game-head"><h2 id="gameTitle" tabindex="-1"><span class="brand-mark">ICC</span> 開季實戰</h2><svg class="icon" aria-hidden="true"><use href="#icon-headset"/></svg></header>
+
+      <div class="progress-bar-area">
+        <div class="progress-title"><div><small>對話進度</small><strong id="questionCounter">1 / 10</strong></div><span id="questionType" class="question-type">產品知識</span></div>
+        <div class="progress-timer"><svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg><div><span>完成時間</span><strong id="timerText" role="timer" aria-label="完成時間" aria-live="off">00:00</strong></div></div>
+        <ol id="stepDots" class="step-dots" aria-label="對話進度"></ol>
+      </div>
+
+      <div class="play-layout">
+        <div class="race-scene">
+          <div class="scene-art">
+            <img id="customerFace" class="game-customer" src="images/customer-unhappy.png" alt="有點不開心的顧客">
+            <div id="moodGauge" class="mood-gauge" role="meter" aria-label="顧客心情" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+              <div class="mood-inner"><small>顧客心情</small><img id="moodEmoji" class="mood-mini-face" src="images/customer-unhappy.png" alt=""><strong id="moodText">40%</strong></div>
+            </div>
+          </div>
+          <div class="customer-question-wrap">
+            <div class="bubble customer-bubble"><div class="customer-bubble-label"><svg class="icon" aria-hidden="true"><use href="#icon-chat"/></svg>顧客</div><p id="questionText" tabindex="-1"></p></div>
+          </div>
+        </div>
+
+        <div class="answer-panel">
+          <div class="answer-title"><span class="answer-title-icon"><svg class="icon" aria-hidden="true"><use href="#icon-headset"/></svg></span><div><h3 id="answerTitle">你會點樣回應顧客？</h3><p>請選擇最合適的回應</p></div></div>
+          <div id="answerList" class="answer-list" role="group" aria-labelledby="answerTitle" aria-describedby="questionText"></div>
+          <p class="tip game-tip"><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg><span>準確資訊 · 清晰解釋 · 良好服務態度</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenResult" class="screen result-screen" aria-labelledby="resultHeading" data-qualified="false" hidden>
+      <header class="result-header"><span class="header-mark" aria-hidden="true">ICC</span><h2 id="resultHeading" class="result-title" tabindex="-1">挑戰完成！</h2><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></header>
+      <div class="result-layout">
+        <div class="result-scene">
+          <div class="confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="result-art">
+            <img id="resultCustomer" class="result-person" src="images/customer-neutral.png" alt="顧客">
+            <div id="finalGauge" class="final-gauge mood-gauge" role="meter" aria-label="最終顧客心情" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="mood-inner"><small>最終顧客心情</small><img id="resultFace" class="result-mini-face" src="images/customer-neutral.png" alt=""><strong id="finalMood">0%</strong></div></div>
+          </div>
+          <div class="bubble result-bubble"><span>今次你嘅表現</span><strong id="resultTitle"></strong><p id="resultMessage"></p></div>
+        </div>
+
+        <div class="summary-card">
+          <h3>表現總結</h3>
+          <div class="summary-table">
+            <div class="summary-row"><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg><span>產品知識準確度</span><strong id="productScore">0 / 7</strong></div>
+            <div class="summary-row"><svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg><span>服務技巧表現</span><strong id="serviceScore">0 / 3</strong></div>
+            <div class="summary-row"><svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg><span>完成時間</span><strong id="completionTime">00:00</strong></div>
+            <div class="summary-row"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg><span>速度獎分</span><strong id="speedBonus">+0</strong></div>
+          </div>
+          <div id="rewardBox" class="award"><span class="award-icon"><svg class="icon" aria-hidden="true"><use id="rewardIcon" href="#icon-trophy"/></svg></span><div><strong id="rewardTitle"></strong><small id="rewardMessage"></small></div></div>
+          <p id="submitStatus" class="status" role="status" aria-live="polite"></p>
+          <div class="result-buttons"><button id="restartBtn" class="outline-btn" type="button"><svg class="icon" aria-hidden="true"><use href="#icon-home"/></svg><span>返回主頁</span></button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Outside the game shell so the background can become inert during feedback. -->
+  <div id="feedbackModal" class="feedback-modal hidden" aria-hidden="true" hidden>
+    <div class="feedback-modal-card" role="dialog" aria-modal="true" aria-labelledby="feedbackMoodTitle" aria-describedby="feedbackReaction feedbackMoodValues" data-direction="neutral">
+      <div class="feedback-modal-customer"><img id="feedbackMoodImage" src="images/customer-neutral.png" alt="顧客反應"></div>
+      <div class="feedback-modal-text"><h2 id="feedbackMoodTitle"></h2><div class="feedback-mood-change"><span id="feedbackMoodValues"></span><strong id="feedbackDelta"></strong></div><p id="feedbackReaction"></p></div>
+      <button id="modalNextBtn" class="yellow-btn modal-next-btn" type="button"><span class="button-label">繼續</span><svg class="icon button-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+    </div>
+  </div>
+  <noscript><p class="noscript-message">請啟用瀏覽器的 JavaScript，然後重新載入以開始挑戰。</p></noscript>
+</body>
+</html>
